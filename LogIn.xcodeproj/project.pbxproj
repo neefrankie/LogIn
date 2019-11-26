@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF04E7A6238D750700B32F82 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04E7A5238D750700B32F82 /* AccountStore.swift */; };
 		AF08B804236D680A00C803C2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08B803236D680A00C803C2 /* APIError.swift */; };
 		AF08B806236D86AB00C803C2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08B805236D86AB00C803C2 /* APIResponse.swift */; };
 		AF1CF8F52352D30200BD2A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CF8F42352D30200BD2A93 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF04E7A5238D750700B32F82 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
 		AF08B803236D680A00C803C2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AF08B805236D86AB00C803C2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		AF1CF8F12352D30200BD2A93 /* LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				AF1CF8FD2352D30800BD2A93 /* LaunchScreen.storyboard */,
 				AF1CF9002352D30800BD2A93 /* Info.plist */,
 				AF22E54F2364027900C4D1FF /* Fetch.swift */,
+				AF04E7A5238D750700B32F82 /* AccountStore.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9B28BE23780716003B1CCE /* AccountItem.swift in Sources */,
+				AF04E7A6238D750700B32F82 /* AccountStore.swift in Sources */,
 				AF22E5502364027900C4D1FF /* Fetch.swift in Sources */,
 				AF1CF8F72352D30200BD2A93 /* ViewController.swift in Sources */,
 				AF9B28BC237805E1003B1CCE /* AccountViewController.swift in Sources */,
