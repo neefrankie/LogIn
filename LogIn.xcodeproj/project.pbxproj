@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AF04E7A6238D750700B32F82 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04E7A5238D750700B32F82 /* AccountStore.swift */; };
+		AF04E7B1238EC96500B32F82 /* LogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04E7B0238EC96500B32F82 /* LogInTests.swift */; };
+		AF04E7B8238ECBF000B32F82 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CF90923536BC100BD2A93 /* LogIn.swift */; };
+		AF04E7BA238ECCB300B32F82 /* PersistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF04E7B9238ECCB200B32F82 /* PersistTests.swift */; };
 		AF08B804236D680A00C803C2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08B803236D680A00C803C2 /* APIError.swift */; };
 		AF08B806236D86AB00C803C2 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF08B805236D86AB00C803C2 /* APIResponse.swift */; };
 		AF1CF8F52352D30200BD2A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CF8F42352D30200BD2A93 /* AppDelegate.swift */; };
@@ -22,8 +25,22 @@
 		AFB86968237AE44700F65747 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB86967237AE44700F65747 /* Account.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AF04E7B3238EC96500B32F82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF1CF8E92352D30200BD2A93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF1CF8F02352D30200BD2A93;
+			remoteInfo = LogIn;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		AF04E7A5238D750700B32F82 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		AF04E7AE238EC96500B32F82 /* LogInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF04E7B0238EC96500B32F82 /* LogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTests.swift; sourceTree = "<group>"; };
+		AF04E7B2238EC96500B32F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF04E7B9238ECCB200B32F82 /* PersistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistTests.swift; sourceTree = "<group>"; };
 		AF08B803236D680A00C803C2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AF08B805236D86AB00C803C2 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		AF1CF8F12352D30200BD2A93 /* LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF04E7AB238EC96500B32F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF1CF8EE2352D30200BD2A93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +75,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF04E7AF238EC96500B32F82 /* LogInTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF04E7B9238ECCB200B32F82 /* PersistTests.swift */,
+				AF04E7B0238EC96500B32F82 /* LogInTests.swift */,
+				AF04E7B2238EC96500B32F82 /* Info.plist */,
+			);
+			path = LogInTests;
+			sourceTree = "<group>";
+		};
 		AF1CF8E82352D30200BD2A93 = {
 			isa = PBXGroup;
 			children = (
 				AF1CF8F32352D30200BD2A93 /* LogIn */,
+				AF04E7AF238EC96500B32F82 /* LogInTests */,
 				AF1CF8F22352D30200BD2A93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1CF8F12352D30200BD2A93 /* LogIn.app */,
+				AF04E7AE238EC96500B32F82 /* LogInTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +135,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF04E7AD238EC96500B32F82 /* LogInTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF04E7B5238EC96500B32F82 /* Build configuration list for PBXNativeTarget "LogInTests" */;
+			buildPhases = (
+				AF04E7AA238EC96500B32F82 /* Sources */,
+				AF04E7AB238EC96500B32F82 /* Frameworks */,
+				AF04E7AC238EC96500B32F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF04E7B4238EC96500B32F82 /* PBXTargetDependency */,
+			);
+			name = LogInTests;
+			productName = LogInTests;
+			productReference = AF04E7AE238EC96500B32F82 /* LogInTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AF1CF8F02352D30200BD2A93 /* LogIn */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF1CF9032352D30800BD2A93 /* Build configuration list for PBXNativeTarget "LogIn" */;
@@ -122,10 +176,14 @@
 		AF1CF8E92352D30200BD2A93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = hubot;
 				TargetAttributes = {
+					AF04E7AD238EC96500B32F82 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = AF1CF8F02352D30200BD2A93;
+					};
 					AF1CF8F02352D30200BD2A93 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -145,11 +203,19 @@
 			projectRoot = "";
 			targets = (
 				AF1CF8F02352D30200BD2A93 /* LogIn */,
+				AF04E7AD238EC96500B32F82 /* LogInTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF04E7AC238EC96500B32F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF1CF8EF2352D30200BD2A93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +229,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF04E7AA238EC96500B32F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF04E7B1238EC96500B32F82 /* LogInTests.swift in Sources */,
+				AF04E7BA238ECCB300B32F82 /* PersistTests.swift in Sources */,
+				AF04E7B8238ECBF000B32F82 /* LogIn.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF1CF8ED2352D30200BD2A93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +257,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF04E7B4238EC96500B32F82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF1CF8F02352D30200BD2A93 /* LogIn */;
+			targetProxy = AF04E7B3238EC96500B32F82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF1CF8F82352D30200BD2A93 /* Main.storyboard */ = {
@@ -202,6 +286,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF04E7B6238EC96500B32F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L52P4D9B8;
+				INFOPLIST_FILE = LogInTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.neefrankie.LogInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogIn.app/LogIn";
+			};
+			name = Debug;
+		};
+		AF04E7B7238EC96500B32F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L52P4D9B8;
+				INFOPLIST_FILE = LogInTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.neefrankie.LogInTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogIn.app/LogIn";
+			};
+			name = Release;
+		};
 		AF1CF9012352D30800BD2A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF04E7B5238EC96500B32F82 /* Build configuration list for PBXNativeTarget "LogInTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF04E7B6238EC96500B32F82 /* Debug */,
+				AF04E7B7238EC96500B32F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AF1CF8EC2352D30200BD2A93 /* Build configuration list for PBXProject "LogIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

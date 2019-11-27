@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// See https://forums.bignerdranch.com/t/ch-16-nskeyedarchiver-archiverootobject-deprecated/15781/3
 class AccountStore {
     let archiveURL: URL = {
         let documentDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -19,7 +20,9 @@ class AccountStore {
     func save(account: Account) -> Bool {
         do {
             let data = try PropertyListEncoder().encode(account)
-            return NSKeyedArchiver.archiveRootObject(data, toFile: archiveURL.path)
+            try data.write(to: archiveURL, options: [.atomic])
+//            let data = NSKeyedArchiver.archivedData(withRootObject: account, requiringSecureCoding: true)
+            return true
         } catch {
             print("saved")
             return false
@@ -27,9 +30,9 @@ class AccountStore {
     }
     
     func load() -> Account? {
-        guard let data = NSKeyedUnarchiver.unarchiveObject(withFile: archiveURL.path) as? Data else { return nil }
-        
+
         do {
+            let data = try Data(contentsOf: archiveURL)
             let account = try PropertyListDecoder().decode(Account.self, from: data)
             
             return account
