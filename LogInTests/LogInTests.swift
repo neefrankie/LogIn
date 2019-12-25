@@ -36,6 +36,32 @@ class LogInTests: XCTestCase {
         }
     }
 
+    func testDirectory() {
+        let documentDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        let applicatioDirectories = FileManager.default.urls(for: .applicationDirectory, in: .userDomainMask)
+        
+        let userDirectories = FileManager.default.urls(for: .userDirectory, in: .userDomainMask)
+        
+        let developerDirectories = FileManager.default.urls(for: .developerDirectory, in: .userDomainMask)
+        
+        let desktopDirectories = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)
+        
+        let downloadDirectories = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)
+        
+        print("Document directories: \(documentDirectories)")
+        
+        print("Application directories: \(applicatioDirectories)")
+        
+        print("User directories: \(userDirectories)")
+        
+        print("Developer directories: \(developerDirectories)")
+        
+        print("Desktop directories: \(desktopDirectories)")
+        
+        print("Download directories: \(downloadDirectories)")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         measure {
