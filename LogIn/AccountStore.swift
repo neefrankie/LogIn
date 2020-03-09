@@ -8,20 +8,23 @@
 
 import Foundation
 
-/// See https://forums.bignerdranch.com/t/ch-16-nskeyedarchiver-archiverootobject-deprecated/15781/3
 class AccountStore {
-    let archiveURL: URL = {
+    private let archiveURL: URL = {
         let documentDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
         let documentDirectory = documentDirectories.first!
-        return documentDirectory.appendingPathComponent("account.archive")
+        return documentDirectory
+            .appendingPathComponent("account")
+            .appendingPathExtension("plist")
     }()
     
-    func save(account: Account) -> Bool {
+    private let plistEncoder = PropertyListEncoder()
+    private let plistDecoder = PropertyListDecoder()
+    
+    func saveToFile(account: Account) -> Bool {
         do {
-            let data = try PropertyListEncoder().encode(account)
-            try data.write(to: archiveURL, options: [.atomic])
-//            let data = NSKeyedArchiver.archivedData(withRootObject: account, requiringSecureCoding: true)
+            let data = try plistEncoder.encode(account)
+            try data.write(to: archiveURL, options: [.atomic, .noFileProtection])
             return true
         } catch {
             print("saved")
@@ -29,15 +32,23 @@ class AccountStore {
         }
     }
     
-    func load() -> Account? {
+    func loadFromFile() -> Account? {
 
+        if let data = try? Data(contentsOf: archiveURL),
+            let decoded = try? plistDecoder.decode(Account.self, from: data) {
+            return decoded
+        }
+        
+        return nil
+    }
+    
+    func clear() {
         do {
-            let data = try Data(contentsOf: archiveURL)
-            let account = try PropertyListDecoder().decode(Account.self, from: data)
-            
-            return account
+            try FileManager.default.removeItem(at: archiveURL)
         } catch {
-            return nil
+            print("Remove account error")
         }
     }
+    
+    static let sharedInstance = AccountStore()
 }
