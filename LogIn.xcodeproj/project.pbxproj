@@ -28,10 +28,12 @@
 		AF1CF90A23536BC100BD2A93 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CF90923536BC100BD2A93 /* LogIn.swift */; };
 		AF22E5502364027900C4D1FF /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22E54F2364027900C4D1FF /* Fetch.swift */; };
 		AF9B28BC237805E1003B1CCE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B28BB237805E1003B1CCE /* AccountViewController.swift */; };
-		AF9B28BE23780716003B1CCE /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B28BD23780716003B1CCE /* AccountItem.swift */; };
 		AFB86968237AE44700F65747 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB86967237AE44700F65747 /* Account.swift */; };
 		AFBCB3662416309A00471A92 /* PasswordTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCB3652416309A00471A92 /* PasswordTokenViewController.swift */; };
 		AFBCB3682416322C00471A92 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBCB3672416322C00471A92 /* ResetPasswordViewController.swift */; };
+		AFD8ED572417AE8800CDCC86 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8ED562417AE8800CDCC86 /* Palette.swift */; };
+		AFD8ED592417EEE700CDCC86 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8ED582417EEE700CDCC86 /* PrimaryButton.swift */; };
+		AFD8ED5D2418C3FD00CDCC86 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD8ED5C2418C3FD00CDCC86 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +71,12 @@
 		AF1CF90923536BC100BD2A93 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		AF22E54F2364027900C4D1FF /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		AF9B28BB237805E1003B1CCE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		AF9B28BD23780716003B1CCE /* AccountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountItem.swift; sourceTree = "<group>"; };
 		AFB86967237AE44700F65747 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AFBCB3652416309A00471A92 /* PasswordTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTokenViewController.swift; sourceTree = "<group>"; };
 		AFBCB3672416322C00471A92 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		AFD8ED562417AE8800CDCC86 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		AFD8ED582417EEE700CDCC86 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		AFD8ED5C2418C3FD00CDCC86 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		AF1CF8F32352D30200BD2A93 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				AFD8ED552417AE2200CDCC86 /* theme */,
 				AF1CF90623536B8D00BD2A93 /* Model */,
 				AF1CF8F42352D30200BD2A93 /* AppDelegate.swift */,
 				AF1CF8F62352D30200BD2A93 /* LoginViewController.swift */,
@@ -153,10 +158,19 @@
 				AF1CF90923536BC100BD2A93 /* LogIn.swift */,
 				AF08B803236D680A00C803C2 /* APIError.swift */,
 				AF08B805236D86AB00C803C2 /* APIResponse.swift */,
-				AF9B28BD23780716003B1CCE /* AccountItem.swift */,
 				AFB86967237AE44700F65747 /* Account.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AFD8ED552417AE2200CDCC86 /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				AFD8ED562417AE8800CDCC86 /* Palette.swift */,
+				AFD8ED582417EEE700CDCC86 /* PrimaryButton.swift */,
+				AFD8ED5C2418C3FD00CDCC86 /* SecondaryButton.swift */,
+			);
+			path = theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,14 +285,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1399222413E5DA00615DA8 /* AddEditEmojiTableViewController.swift in Sources */,
-				AF9B28BE23780716003B1CCE /* AccountItem.swift in Sources */,
 				AF04E7A6238D750700B32F82 /* AccountStore.swift in Sources */,
 				AF22E5502364027900C4D1FF /* Fetch.swift in Sources */,
+				AFD8ED5D2418C3FD00CDCC86 /* SecondaryButton.swift in Sources */,
 				AF1CF8F72352D30200BD2A93 /* LoginViewController.swift in Sources */,
 				AF9B28BC237805E1003B1CCE /* AccountViewController.swift in Sources */,
 				AF1CF90A23536BC100BD2A93 /* LogIn.swift in Sources */,
+				AFD8ED592417EEE700CDCC86 /* PrimaryButton.swift in Sources */,
 				AFBCB3662416309A00471A92 /* PasswordTokenViewController.swift in Sources */,
 				AFB86968237AE44700F65747 /* Account.swift in Sources */,
+				AFD8ED572417AE8800CDCC86 /* Palette.swift in Sources */,
 				AF139918240E610A00615DA8 /* MainController.swift in Sources */,
 				AF08B804236D680A00C803C2 /* APIError.swift in Sources */,
 				AF1399242415E90400615DA8 /* SignUpViewController.swift in Sources */,

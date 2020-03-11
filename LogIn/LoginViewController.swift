@@ -41,11 +41,11 @@ class LoginViewController: UIViewController {
         
         loginButton.isEnabled = !emailText.isEmpty && !passwordText.isEmpty
         
-        if loginButton.isEnabled {
-            loginButton.backgroundColor = loginButton.backgroundColor?.withAlphaComponent(1.0)
-        } else {
-            loginButton.backgroundColor = loginButton.backgroundColor?.withAlphaComponent(0.5)
-        }
+//        if loginButton.isEnabled {
+//            loginButton.backgroundColor = loginButton.backgroundColor?.withAlphaComponent(1.0)
+//        } else {
+//            loginButton.backgroundColor = loginButton.backgroundColor?.withAlphaComponent(0.5)
+//        }
     }
     
     @IBAction func logIn(_ sender: UIButton) {
